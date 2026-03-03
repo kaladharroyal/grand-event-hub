@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# Eventique — College Event Management Platform
 
-## Project info
+A premium, dark-themed single-page application for discovering, registering, and managing college campus events.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- **User Authentication** — Register & login with localStorage persistence
+- **Event Dashboard** — Browse upcoming events in list or calendar view
+- **Event Details** — View activities, chief guests, registration stats & related events
+- **Event Registration** — Register for events with a confirmation flow
+- **Notifications** — Real-time notification bell with unread count & mark-as-read
+- **Responsive Design** — Works on desktop and mobile devices
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **HTML5** — Semantic structure
+- **CSS3** — Custom properties, glassmorphism, gradients, animations
+- **JavaScript (ES6+)** — SPA routing, DOM rendering, localStorage state
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+No frameworks. No build tools. No npm dependencies.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+grand-event-hub/
+├── index.html          # Entry point
+├── style.css           # Full design system
+├── app.js              # SPA router & page rendering
+├── auth.js             # Authentication module
+├── data.js             # Mock event data & utilities
+└── notifications.js    # Notification system
 ```
 
-**Edit a file directly in GitHub**
+## How to Run
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Simply open `index.html` in a browser, or start a local server:
 
-**Use GitHub Codespaces**
+```sh
+npx serve
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Then visit `http://localhost:3000`.
 
-## What technologies are used for this project?
+## Pages
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+| Route | Page |
+|-------|------|
+| `#/` | Login |
+| `#/register` | Create Account |
+| `#/dashboard` | Event Dashboard |
+| `#/event/:id` | Event Details |
+| `#/register-event/:id` | Event Registration |
+| `#/thank-you/:id` | Confirmation |
